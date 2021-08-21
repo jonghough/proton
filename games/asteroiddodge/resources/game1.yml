@@ -1,0 +1,29 @@
+---
+title: "Asteroid Dodge!"
+module: "games.asteroiddodge.asteroidscene"
+scene: "AsteroidScene"
+has_graphics: True
+dims:
+  width: 700
+  height: 700
+name: "attempt 1"
+game_params:
+  asteroid_speed: 100
+  asteroid_freq_min: 2
+  asteroid_freq_max: 2
+  player_speed: 200
+learner:
+  attributes:
+    model_path: "./games/asteroiddodge/resources/tf/asteroid_model002"
+    learning_rate: 0.005
+    is_training: true
+    eps_min: 0.05
+    eps_max: 1.0
+    eps_decay_steps: 1000
+    n_steps : 1000
+    start_training_steps: 100
+    training_interval: 3
+    save_steps: 50
+    copy_steps: 50
+    discount_rate: 0.98
+    batch_size: 50

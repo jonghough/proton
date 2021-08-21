@@ -1,0 +1,18 @@
+---
+title: "Othello!"
+game: "othello"
+module: "games.othello.othelloscene"
+scene: "OthelloScene"
+has_graphics: True 
+dims:
+  width: 700
+  height: 700
+name: "white player, black minimax"
+black:
+  playtype: "random"
+  attributes:
+    searchdepth: 3
+white:
+  playtype: "minimax"
+  attributes:
+    searchdepth: 7

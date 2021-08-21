@@ -1,0 +1,57 @@
+---
+title: "Othello!"
+game: "othello"
+module: "games.othello.othelloscene"
+scene: "OthelloScene"
+has_graphics: True 
+dims:
+  width: 700
+  height: 700
+name: "white player, black minimax"
+
+white:
+  # playtype: "minimax"
+  # attributes:
+  #   searchdepth: 4
+  playtype: "ml"
+  attributes:
+    model_path: "./games/othello/resources/tf/othello_model003"
+    learning_rate: 0.05
+    is_training: true
+    eps_min: 0.05
+    eps_max: 1.0
+    eps_decay_steps: 1000
+    n_steps : 1000000
+    save_steps: 50
+    copy_steps: 50
+    discount_rate: 0.97
+    batch_size: 50
+# black:
+#   playtype: "random"
+#   attributes:
+#     model_path: "./games/othello/resources/tf/othello_model001copy"
+#     learning_rate: 0.01
+#     is_training: false
+#     eps_min: 0.05
+#     eps_max: 1.0
+#     eps_decay_steps: 1000
+#     n_steps : 1000000
+#     save_steps: 50
+#     copy_steps: 25
+#     discount_rate: 0.95
+#     batch_size: 50
+black:
+  playtype: "minimax"
+  attributes:
+    searchdepth: 30
+    log_level : 0
+
+# white:
+#  playtype: "ml"
+#  attributes:
+#    model_path: "./games/othello/resources/tf/othello_model001"
+#    learning_rate: 0.01
+# white:
+#   playtype: "human"
+#   attributes:
+#     searchdepth: 5
