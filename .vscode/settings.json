@@ -1,0 +1,7 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.pythonPath": "/home/jon/anaconda3/envs/proton3/bin/python",
+    "files.watcherExclude": {
+        "**/target": true
+    }
+}

@@ -1,0 +1,2 @@
+model_checkpoint_path: "othello_model001"
+all_model_checkpoint_paths: "othello_model001"
